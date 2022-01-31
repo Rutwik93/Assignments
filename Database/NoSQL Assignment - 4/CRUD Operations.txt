@@ -1,0 +1,120 @@
+========================================================
+General Operations
+========================================================
+
+show dbs - List all databases.
+
+show collections - List all collections.
+
+use 'Database Name' - Select (if exists) or Create (if not) a database. (Ex. use employee)
+
+db - Shows the database you're currently using.
+
+========================================================
+CRUD Operations
+========================================================
+
+---------------------
+Create Collection
+---------------------
+
+db.createCollection('Collection Name') - creates a collection
+    
+Example:- db.createCollection('employees')
+
+---------------------
+Insert Single Record
+---------------------
+
+db.employees.insert({
+name: "Rutwik Patel",
+age: 22,
+email: "rutwik.patel@aimdek.com",
+join_date: Date()
+});
+
+------------------------
+Insert Multiple Records
+------------------------
+
+db.employees.insertMany([
+{
+name: "Preksha Sheth",
+age: 23,
+email: "preksh.sheth@aimdek.com",
+join_date: Date()
+},
+{
+name: "Neel Golarana",
+age: 23,
+email: "neel.golarana@aimdek.com",
+join_date: Date()
+}
+]);
+
+------------------
+Read Operations
+------------------
+
+db.employees.find() - lists all documents.
+
+db.employees.find().pretty() - lists all documents in better viewable format.
+
+db.employees.find().sort({name:1}).pretty() - sort based on particular field, 1 is for ascending and -1 is for descending order.
+
+db.employees.find().count() - returns record count.
+
+db.employees.find().limit(INTEGER) - limit the number of records.
+
+db.employees.find({age:{$gt:20}}).pretty() - this will return all employees where age is greater than 20.
+
+
+------------------
+Update Operations
+------------------
+
+[Method 1]: First method which will update all records where age is 18 and replace them with 3 fields as specified below, 
+so other fields will get removed if you don't specify them in update command itself. here we haven't specified
+"join_date" field so it won't be there in updated record.
+
+db.employees.update({age:18},{
+    "name" : "Vinit Soni",
+    "age" : 19,
+    "email" : "kunjal.simzia@aimdek.com"
+});
+
+[Method 2]: Specify what fields to change using $set operator and rest of the fields will remain intact as shown in first example.
+
+Example 1:-
+
+db.employees.update({age:19},
+{
+    $set: {
+        "age" : 18,
+        "email" : "vinit.soni@aimdek.com",
+        "join_date" : Date()
+    }
+});
+
+Example 2:- This query will increment age by 2 where age is 18, so it'll be 20.
+
+db.employees.update({age:18},
+{
+    $inc:{
+        age:2
+    }
+});
+
+More operators for update function:-
+https://docs.mongodb.com/manual/reference/operator/update/
+
+
+------------------
+Delete Operations
+------------------
+
+db.employees.remove({age:{$lte:20}}) - this will delete all records where age is less than or equal to 20.
+
+db.collection_name.drop() - drop a collection.
+
+db.dropDatabase() - Drops the selected database.
