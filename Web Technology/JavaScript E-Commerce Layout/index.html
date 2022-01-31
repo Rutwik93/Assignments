@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="ecommerce.js"></script>
+    <title>E-Commerce Layout</title>
+</head>
+<body>
+
+    <div class="d-flex flex-row bd-highlight bg-primary header">
+        <div class="p-2 bd-highlight">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
+                <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+        </div>
+        <div class="p-2 bd-highlight" style="font-size: 28px;">E-Commerce Layout</div>
+    </div>
+
+    <div class="container-fluid h-100" style="position:relative; margin-top:12vh;">
+        <div class="row h-100">
+            <div class="col-md-6" style="padding: 0%;">
+        
+                <div class="container-fluid h-100">
+                    <div class="row mt-2 mb-2 singleitem">
+                        <div class="col">
+                            
+                            <p style="text-align: center; padding-top: 2%;" class="fw-bold">Add Product</p>
+                            <div class="myform">
+                                Product Name: <input type="text" id="pname"><br>
+                                Product Image: <input type="file" id="pimg"><br>
+                                Product Description: <input type="text" id="pdesc"><br>
+                                Product Quantity: <input type="number" id="pqty"><br>
+                                Product Price: <input type="number" id="pprice"><br>
+                                <div style="text-align: center; margin-top: 3%;">
+                                    <button type="button" class="btn btn-primary" onclick="addProduct()">Add Product</button><br>
+                                </div>
+                            </div>
+                        </div>                  
+                    </div>
+
+
+                    <div class="row p-2 singleitem">
+                        <div class="col" style="padding: 0%;">
+                            <p style="text-align: center; padding-top: 2%;" class="fw-bold">Cart</p>
+                            
+                            <div class="container-fluid" id="cartProduct"> 
+                                            
+                            </div>
+                            
+                            <div class="container-fluid" id="cartTotal" style="padding: 0%; margin: 0%;"> 
+                                <div class="row justify-content-end cartTotal">
+                                    <div class="col-4">
+                                      Cart Total: 
+                                    </div>
+                                    <div class="col-4" id="cTotal">
+                                      0
+                                    </div>
+                                  </div>     
+                            </div>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mt-2">
+                <div class="container-fluid mb-2 singleitemright">
+                    <div class="row">
+                        <div class="col prodList">
+                            <p style="text-align: center; margin-top: 2%;" class="fw-bold">Products List</p>
+                            
+                            <div class="container-fluid fullProduct" id="fullProduct"> 
+                                
+                            </div>
+                                                           
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

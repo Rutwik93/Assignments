@@ -1,0 +1,85 @@
+html, body
+{
+    height: 100%;
+}
+
+.singleitem
+{   
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.singleitemright
+{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+}
+
+input
+{
+    margin-top: 2%;
+}
+
+.myform
+{
+    margin-bottom: 2%;
+    overflow:hidden;
+    width: 100%;
+}
+
+.fullProduct
+{
+    padding: 0%;  
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
+
+.singleProduct
+{
+    margin-bottom: 3%;
+    padding: 2% 0% 2% 0%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.productImage
+{
+    height: 30vh;
+    width: 100%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+.productList
+{
+    padding: 0%;
+}
+
+br
+{
+    margin-bottom: 2%;
+}
+
+.cartTotal
+{
+    padding: 0%;
+    margin: 0%; 
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.header
+{
+    color:white;
+    padding-left: 1%;
+    padding-right: 5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: fixed;
+    top:0%;
+    width: 100%;
+    z-index: 2;
+}

@@ -1,0 +1,70 @@
+* {
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    display: grid;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(39, 39, 39);
+    color:rgb(1, 156, 1);
+}
+
+.sidebar
+{
+    width: 24%; 
+    background-color: rgb(46, 46, 46);
+    height:100%; 
+    position: absolute;
+    padding: 1.5% 0% 1.5% 0.5%;
+    text-align: center;
+    box-shadow: 2px 0px 15px rgba(71, 71, 71, 0.8);
+}
+
+.header
+{
+    float: right; 
+    width: 75%;
+    text-align: center;
+    padding: 1.5% 0% 1.5% 0%;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 2px 2px 15px 3px rgba(71, 71, 71, 0.8);
+}
+
+.content
+{
+    float: right; 
+    width: 70.5%;
+    padding: 2% 2% 2% 2%;
+}
+
+.grid-container {
+    width:100%;
+	display: grid;
+    grid-gap: 5% 2%;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(39, 39, 39);
+    
+  }
+  
+  .grid-item {
+    background-color: rgb(48, 48, 48);
+    padding: 25%;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .sbar
+  {
+      width: 50%;
+      height: 30px;
+      font-size: 20px;
+      color:rgb(1, 156, 1);
+      border: 2px dashed rgba(255, 255, 255, 0.8);;
+      font-weight: bold;
+      background-color: rgb(39, 39, 39);
+  }

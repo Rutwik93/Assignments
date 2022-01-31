@@ -1,0 +1,65 @@
+html, body {
+  height: 100%;
+  font-size: 25px;
+  
+}
+
+.sidebar {
+  background-color: #2F3A8F;
+  padding: 1.5%;
+  color: white;
+  text-align: center;
+  box-shadow: 1px 10px 11px -5px rgba(115,115,115,0.65);
+-webkit-box-shadow: 1px 10px 11px -5px rgba(115,115,115,0.65);
+-moz-box-shadow: 1px 10px 11px -5px rgba(115,115,115,0.65);
+  
+}
+
+.cbar {
+  background-color: rgb(226, 226, 226);
+  color:rgb(34, 34, 34);
+  padding: 0px;
+  
+}
+
+.header
+{
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    margin: 0px;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 10px 11px -5px rgba(115,115,115,0.65);
+-webkit-box-shadow: 1px 10px 11px -5px rgba(115,115,115,0.65);
+-moz-box-shadow: 1px 10px 11px -5px rgba(115,115,115,0.65);
+}
+
+.content
+{
+    margin-top: 2%;
+    padding: 2%;
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+}
+
+.rowgroup
+{
+  position:relative;
+} 
+
+.sbar
+{
+  border-radius: 50px;
+  border: 1px solid rgb(216, 216, 216);
+  padding-left: 2%;
+  padding-right: 2%;
+  box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.1);
+}
+
+@media (max-width:768px) {
+  
+  
+}
